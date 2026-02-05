@@ -1,26 +1,97 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --cream: #FFF8E7;
+  --lavender: #E6E6FA;
+  --mint: #B5EAD7;
+  --peach: #FFDAB9;
+  --blush: #FFB6C1;
+  --sky: #B5D8EB;
+  --charcoal: #4A4A4A;
+  --slate: #6B7280;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--cream) 0%, var(--lavender) 100%);
+  overflow-x: hidden;
+}
+
+/* Pixel Border */
+.pixel-border {
+  border: 3px solid var(--charcoal);
+  box-shadow: 
+    4px 4px 0 var(--charcoal),
+    -1px -1px 0 rgba(0,0,0,0.1) inset;
+}
+
+/* Pixel Shadow */
+.pixel-shadow {
+  box-shadow: 
+    6px 6px 0 var(--charcoal),
+    12px 12px 0 rgba(0,0,0,0.1);
+}
+
+/* Pixel Hover Effect */
+.pixel-hover {
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.pixel-hover:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 
+    9px 9px 0 var(--charcoal),
+    15px 15px 0 rgba(0,0,0,0.1);
+}
+
+.pixel-hover:active {
+  transform: translate(2px, 2px);
+  box-shadow: 
+    2px 2px 0 var(--charcoal);
+}
+
+/* Scanline Effect (Optional - for extra retro feel) */
+.scanlines::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.03) 2px,
+    rgba(0, 0, 0, 0.03) 4px
+  );
+  pointer-events: none;
+  z-index: 100;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cream);
+  border: 2px solid var(--charcoal);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--mint);
+  border: 2px solid var(--charcoal);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--sky);
 }
