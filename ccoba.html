@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Pixel Classroom - Selamat Datang di Kelas Digital Kami</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "status-success": "#A3C9A8",
+                        "on-tertiary-container": "#00403f",
+                        "on-primary": "#ffffff",
+                        "background": "#fff8f6",
+                        "inverse-on-surface": "#feede7",
+                        "outline": "#87736a",
+                        "primary-fixed-dim": "#ffb595",
+                        "surface-tint": "#954922",
+                        "on-primary-fixed-variant": "#77320c",
+                        "background-body": "#FAF4ED",
+                        "surface": "#fff8f6",
+                        "secondary": "#795828",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#e88a5e",
+                        "on-tertiary-fixed": "#00201f",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-variant": "#f0dfd9",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#5f4112",
+                        "text-primary": "#2C2118",
+                        "text-secondary": "#5C4A3F",
+                        "secondary-fixed-dim": "#ebbf85",
+                        "primary": "#954922",
+                        "surface-container": "#fbeae4",
+                        "inverse-surface": "#382e2b",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#54433c",
+                        "on-background": "#221a16",
+                        "error": "#ba1a1a",
+                        "surface-card": "#FFEEDB",
+                        "on-error": "#ffffff",
+                        "tertiary": "#006a68",
+                        "surface-bright": "#fff8f6",
+                        "tertiary-fixed-dim": "#63d8d6",
+                        "on-secondary-fixed": "#291800",
+                        "border-neutral": "#E8D9C8",
+                        "surface-container-low": "#fff1ec",
+                        "surface-dim": "#e7d7d1",
+                        "tertiary-container": "#35b3b1",
+                        "on-primary-container": "#642400",
+                        "on-surface": "#221a16",
+                        "secondary-container": "#fdd094",
+                        "tertiary-fixed": "#81f5f2",
+                        "on-tertiary-fixed-variant": "#00504f",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#ffddb4",
+                        "on-secondary-container": "#785727",
+                        "surface-container-highest": "#f0dfd9",
+                        "primary-fixed": "#ffdbcc",
+                        "outline-variant": "#dac1b8",
+                        "surface-container-high": "#f5e5df",
+                        "inverse-primary": "#ffb595",
+                        "on-primary-fixed": "#351000"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "section-gap": "120px",
+                        "margin-page": "5vw",
+                        "pixel-unit": "4px"
+                    },
+                    "fontFamily": {
+                        "h2-pixel": ["VT323", "monospace"],
+                        "label-pixel": ["VT323", "monospace"],
+                        "body-strong": ["Inter", "sans-serif"],
+                        "h1-pixel": ["VT323", "monospace"],
+                        "body-main": ["Inter", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "h2-pixel": ["48px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "label-pixel": ["20px", { "lineHeight": "1.0", "fontWeight": "400" }],
+                        "body-strong": ["18px", { "lineHeight": "1.7", "fontWeight": "600" }],
+                        "h1-pixel": ["72px", { "lineHeight": "1.1", "letterSpacing": "0px", "fontWeight": "400" }],
+                        "body-main": ["18px", { "lineHeight": "1.7", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=VT323&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        body {
+            background-color: #FAF4ED;
+            background-image:
+                linear-gradient(rgba(44, 33, 24, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(44, 33, 24, 0.03) 1px, transparent 1px);
+            background-size: 20px 20px;
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="%232C2118" d="M0 0v16l4-4 3 6 2-1-3-6h5L0 0z"/></svg>'), auto;
+        }
+
+        a:hover,
+        button:hover,
+        .hover-target:hover {
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%23E88A5E" d="M9 2v4h-2v4h-2v10h2v2h8v-2h2v-10h-2v-4h-2v-4h-4zm2 2h2v4h2v2h-6v-2h2v-4zm-4 6h10v8h-10v-8zm2 2v4h6v-4h-6z"/></svg>'), pointer;
+        }
+
+        .pixel-border {
+            border: 4px solid #2C2118;
+            border-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAqwAAAKsBzdX+SQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAArSURBVBiVY/z//z8DOsDExIQswwQkgMlgE2QQ04gM0AWJUUQ2D58E2EIBAGYxDzJv8D82AAAAAElFTkSuQmCC') 4 repeat;
+        }
+
+        .pixel-border-divider {
+            border-bottom: 4px dotted #2C2118;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: inset 0 0 10px 2px #F4C78C;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .icon-spin:hover {
+            transform: rotate(360deg);
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .btn-pixel:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+
+<body class="font-body-main text-text-primary min-h-screen flex flex-col">
+    <!-- TopNavBar (from JSON) -->
+    <nav
+        class="sticky top-0 z-50 flex justify-between items-center px-8 py-4 w-full bg-[#FAF4ED] dark:bg-stone-950 docked full-width top-0 border-b-4 border-double border-stone-800 dark:border-stone-200 border-b-4 border-stone-800 dark:border-stone-700 flat no-shadows hidden md:flex">
+        <div class="text-2xl font-black text-[#E88A5E] tracking-tighter uppercase">
+            IDEONE
+        </div>
+        <div class="flex gap-6 font-space-grotesk text-[#2C2118] dark:text-stone-100 font-medium">
+            <a class="text-[#E88A5E] border-b-2 border-[#E88A5E] font-bold pb-1 Active items scale-95 transition-transform ease-in-out hover:bg-[#FFEEDB] dark:hover:bg-stone-800 transition-all duration-150 px-2 py-1"
+                href="#">Home</a>
+            <a class="text-stone-600 dark:text-stone-400 hover:text-[#E88A5E] transition-colors duration-150 hover:bg-[#FFEEDB] dark:hover:bg-stone-800 transition-all duration-150 px-2 py-1 rounded"
+                href="#">Gallery</a>
+            <a class="text-stone-600 dark:text-stone-400 hover:text-[#E88A5E] transition-colors duration-150 hover:bg-[#FFEEDB] dark:hover:bg-stone-800 transition-all duration-150 px-2 py-1 rounded"
+                href="#">Curriculum</a>
+            <a class="text-stone-600 dark:text-stone-400 hover:text-[#E88A5E] transition-colors duration-150 hover:bg-[#FFEEDB] dark:hover:bg-stone-800 transition-all duration-150 px-2 py-1 rounded"
+                href="#">Students</a>
+            <a class="text-stone-600 dark:text-stone-400 hover:text-[#E88A5E] transition-colors duration-150 hover:bg-[#FFEEDB] dark:hover:bg-stone-800 transition-all duration-150 px-2 py-1 rounded"
+                href="#">Archive</a>
+        </div>
+        <div class="flex items-center gap-4">
+            <div class="relative">
+                <span class="material-symbols-outlined absolute right-2 top-2 text-text-secondary">search</span>
+                <input
+                    class="bg-surface-card border-4 border-dashed border-text-primary px-3 py-1 font-label-pixel text-label-pixel text-text-primary focus:outline-none focus:border-primary-container placeholder:text-text-secondary w-48"
+                    placeholder="Search..." type="text" />
+            </div>
+            <button
+                class="bg-primary-container text-on-primary border-4 border-dashed border-text-primary px-4 py-2 font-label-pixel text-label-pixel hover:scale-105 transition-transform btn-pixel shadow-[4px_4px_0_0_#2C2118]">
+                Join Class
+            </button>
+        </div>
+    </nav>
+    <!-- Mobile Nav Placeholder (Simplistic) -->
+    <div
+        class="md:hidden flex justify-between items-center p-4 border-b-4 border-dashed border-text-primary bg-background-body sticky top-0 z-50">
+        <div class="text-2xl font-black text-primary-container tracking-tighter uppercase font-h2-pixel">IDEONE
+        </div>
+        <span class="material-symbols-outlined text-3xl">menu</span>
+    </div>
+    <!-- Main Content Canvas -->
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section
+            class="w-full min-h-[819px] flex flex-col md:flex-row items-center justify-center px-margin-page py-section-gap relative overflow-hidden">
+            <div class="md:w-1/2 z-10 flex flex-col items-start gap-6">
+                <h1 class="font-h1-pixel text-h1-pixel text-text-primary drop-shadow-[4px_4px_0_rgba(232,138,94,0.3)]">
+                    Selamat Datang di<br />
+                    <span class="text-primary-container">Kelas Digital Kami</span>
+                </h1>
+                <p
+                    class="font-body-strong text-body-strong text-text-secondary max-w-md border-l-4 border-dashed border-primary-container pl-4">
+                    Ruang belajar yang hangat, kreatif, dan modern. Membawa nostalgia pixel ke dalam pembelajaran
+                    interaktif.
+                </p>
+                <button
+                    class="mt-4 bg-primary-container text-background border-4 border-dashed border-text-primary px-8 py-4 font-label-pixel text-label-pixel hover:scale-105 transition-transform btn-pixel shadow-[6px_6px_0_0_#2C2118] hover:shadow-[2px_2px_0_0_#2C2118] hover:translate-y-1 hover:translate-x-1 relative group overflow-hidden">
+                    <span class="relative z-10">Masuk Kelas Hari Ini</span>
+                    <div
+                        class="absolute inset-0 bg-primary-fixed-dim translate-y-full group-hover:translate-y-0 transition-transform duration-200 z-0">
+                    </div>
+                </button>
+            </div>
+            <div class="md:w-1/2 mt-12 md:mt-0 relative flex justify-center items-center h-[500px]">
+                <!-- Pixel Art Illustration Placeholder -->
+                <div
+                    class="absolute inset-0 bg-surface-card border-8 border-double border-text-primary transform rotate-3 z-0 w-full max-w-[500px] h-full max-h-[500px]">
+                </div>
+                <img alt="Cozy pixel art style classroom with teacher and students"
+                    class="relative z-10 border-4 border-dashed border-text-primary w-[90%] h-[90%] object-cover object-center bg-surface-variant transform -rotate-2"
+                    data-alt="digital illustration of a cozy classroom in a colorful 16-bit pixel art style, warm lighting, teacher at desk, students with laptops, detailed pixel background"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQ4PZgObrNxgP5GPAwuiqW4aoUqYhzz8uN7l8lgKdas64CHhz5W4aR5br6Glysx5ghDcIOWf762oHphNLIvCFTtrVnouCqs520rj-KE05tIhWH-jlXDwT3-9Z4tfTt75pG009yElOs1iv0B704YMOmR617PISZanFDRSd7xq3B4WTMk8zjaALY1Xv-XF3Nl8KVYPRt5vVB9YY3GpkocqoE0iNsvou0uaD6qG9K9vRsOw_jfDfm_TzXTrcgshJk0BBPsdGRyh2Oxv9E" />
+            </div>
+        </section>
+        <div class="w-full pixel-border-divider"></div>
+        <!-- Section 2: Apa yang Akan Kamu Pelajari (Bento Grid) -->
+        <section class="px-margin-page py-section-gap">
+            <h2 class="font-h2-pixel text-h2-pixel text-text-primary mb-12 text-center">
+                <span class="material-symbols-outlined align-middle mr-2 text-primary-container"
+                    style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+                Apa yang Akan Kamu Pelajari
+                <span class="material-symbols-outlined align-middle ml-2 text-primary-container"
+                    style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-gutter max-w-6xl mx-auto auto-rows-[250px]">
+                <!-- Card 1: Large -->
+                <div
+                    class="bg-surface-card border-4 border-dashed border-text-primary p-6 relative card-hover md:col-span-2 group overflow-hidden">
+                    <span
+                        class="material-symbols-outlined absolute top-4 right-4 text-3xl text-secondary-fixed-dim icon-spin">code</span>
+                    <h3 class="font-label-pixel text-label-pixel text-text-primary mb-2">Pemrograman Dasar</h3>
+                    <p class="font-body-main text-body-main text-text-secondary mt-4">Pahami logika dasar dengan bahasa
+                        yang mudah dipelajari. Mulai dari nol hingga membuat program sederhana.</p>
+                    <div class="absolute bottom-0 right-0 w-24 h-24 bg-primary-container opacity-10 rounded-tl-full">
+                    </div>
+                </div>
+                <!-- Card 2: Small -->
+                <div class="bg-[#f0dfd9] border-4 border-dashed border-text-primary p-6 relative card-hover group">
+                    <span
+                        class="material-symbols-outlined absolute top-4 right-4 text-3xl text-primary icon-spin">brush</span>
+                    <h3 class="font-label-pixel text-label-pixel text-text-primary mb-2">Desain Pixel Art</h3>
+                    <p class="font-body-main text-body-main text-text-secondary mt-4 text-sm">Ciptakan karakter dan
+                        dunia 2D mu sendiri.</p>
+                </div>
+                <!-- Card 3: Small -->
+                <div class="bg-[#fbeae4] border-4 border-dashed border-text-primary p-6 relative card-hover group">
+                    <span
+                        class="material-symbols-outlined absolute top-4 right-4 text-3xl text-tertiary-container icon-spin">database</span>
+                    <h3 class="font-label-pixel text-label-pixel text-text-primary mb-2">Struktur Data</h3>
+                    <p class="font-body-main text-body-main text-text-secondary mt-4 text-sm">Cara cerdas menyimpan dan
+                        mengelola informasi.</p>
+                </div>
+                <!-- Card 4: Medium -->
+                <div
+                    class="bg-[#fff1ec] border-4 border-dashed border-text-primary p-6 relative card-hover md:col-span-2 flex items-center justify-between group">
+                    <div>
+                        <h3 class="font-label-pixel text-label-pixel text-text-primary mb-2">Pengembangan Game Web</h3>
+                        <p class="font-body-main text-body-main text-text-secondary mt-2">Gabungkan kode dan art untuk
+                            membuat game yang bisa dimainkan di browser.</p>
+                    </div>
+                    <span
+                        class="material-symbols-outlined text-6xl text-primary-container opacity-50 group-hover:opacity-100 transition-opacity mr-4 icon-spin"
+                        style="font-variation-settings: 'FILL' 1;">sports_esports</span>
+                </div>
+            </div>
+        </section>
+        <div class="w-full pixel-border-divider"></div>
+        <!-- Section 3: Proyek Terbaru Siswa (Horizontal Gallery) -->
+        <section class="px-margin-page py-section-gap overflow-hidden bg-surface-container-lowest">
+            <h2 class="font-h2-pixel text-h2-pixel text-text-primary mb-12 flex items-center gap-4">
+                Proyek Terbaru Siswa
+                <div class="flex-grow border-b-4 border-dotted border-border-neutral"></div>
+            </h2>
+            <div class="flex gap-8 overflow-x-auto pb-8 snap-x snap-mandatory hide-scrollbar"
+                style="scrollbar-width: none;">
+                <!-- Gallery Item 1 -->
+                <div class="flex-shrink-0 w-[300px] md:w-[400px] snap-center">
+                    <div
+                        class="bg-surface border-4 border-dashed border-text-primary p-2 group hover:bg-surface-card transition-colors duration-300">
+                        <div class="relative h-64 overflow-hidden border-2 border-text-primary mb-4">
+                            <img alt="Retro game project"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                data-alt="screenshot of a 16-bit retro arcade game with a spaceship, colorful stars background, pixel art style, high contrast"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDc0bmFL3WkMp1DxEPT1N5yvFLsicQhgDd8lFKUxWqebYeMtXbjqvmy4fbSuZwULY17qzENEIDPHODTEiDpXY7IWg1kr86IpsBkDekmYmI0PQ035fX8TyKr-wKpgTvDIdiUdc5elQdQ2vkWeccTLxDvlAqi--6WKZgV7dous2GUCgW36etKAIpJknhM7Smp5uUAUqr7CzpiuzXy0yX8ihJrwdVQyjjs73_r3L7fDX_Kn-c9yDBZa_lnIvASWHH7sKxqNT5oDke0NaNk" />
+                        </div>
+                        <h4 class="font-label-pixel text-label-pixel text-text-primary">Space Explorer V2</h4>
+                        <p class="font-body-main text-sm text-text-secondary">Oleh: Budi (Kelas Pagi)</p>
+                    </div>
+                </div>
+                <!-- Gallery Item 2 -->
+                <div class="flex-shrink-0 w-[300px] md:w-[400px] snap-center mt-8">
+                    <div
+                        class="bg-surface border-4 border-dashed border-text-primary p-2 group hover:bg-surface-card transition-colors duration-300">
+                        <div class="relative h-64 overflow-hidden border-2 border-text-primary mb-4">
+                            <img alt="Data visualization dashboard"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 filter sepia-[0.2]"
+                                data-alt="pixelated style dashboard UI with colorful charts, graphs and data widgets on a dark background, 8-bit aesthetic"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkg3QKJN3XmyDgaJCztlOdGJck2vq3lUxTdDxaBKx_b09qZScIwj_zEK3HoGg1hqDpUKO71UloC9a_3nGrSHHMN_neYJSZDOjRYa4Vhg_b5wH1WqExxzr2Mo94Asw2OgHSjf2pZRe8Sl0rR6YMvNd8uKvKilKK16qX1W1syhYtcymxq6I4nV_alkgQagN25GVU68RaohMnX_7qKi3_mYt5g_ndcakEd44X3X1lIzG26QOR-ehwsoUrlZOn3czp6aKw_GTJGD3Y5ZVg" />
+                        </div>
+                        <h4 class="font-label-pixel text-label-pixel text-text-primary">Pixel Dashboard</h4>
+                        <p class="font-body-main text-sm text-text-secondary">Oleh: Siti (Kelas Sore)</p>
+                    </div>
+                </div>
+                <!-- Gallery Item 3 -->
+                <div class="flex-shrink-0 w-[300px] md:w-[400px] snap-center">
+                    <div
+                        class="bg-surface border-4 border-dashed border-text-primary p-2 group hover:bg-surface-card transition-colors duration-300">
+                        <div class="relative h-64 overflow-hidden border-2 border-text-primary mb-4">
+                            <img alt="Digital farm simulation"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                data-alt="top down view of a pixel art farming simulator game, crops, little house, dirt paths, vibrant greens and browns"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIWvakZyv68FLC9ArGpcYvlFIiN3phEdfKH1Y2L-8M-FLKCkVGVJk-QBAeOCZIJbLfqMZn-rcGPZIdQqLEAuXykjSmc_Ej2jCH9nq1PQOiI60pTkV5PJamP2W0Au8Masnj6BrItRD_T5jUUSrtbCIxdbE65YNhXHx1GSH-Xvt82BeTU4fatchCmBboXeS3zuKPCOXllD8Y8TkLAWIpShK9AQuOkv_6h-0r_xT9872Hfi1-F4JElP35TJmS4ZRY4kpwjPFcsM_ghmbB" />
+                        </div>
+                        <h4 class="font-label-pixel text-label-pixel text-text-primary">Stardew Clone</h4>
+                        <p class="font-body-main text-sm text-text-secondary">Oleh: Andi (Kelas Weekend)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer (from JSON) -->
+    <footer
+        class="flex flex-col md:flex-row justify-between items-center px-12 py-8 relative overflow-hidden bg-[#2C2118] dark:bg-black w-full border-t-4 border-dotted border-[#E88A5E] shadow-[inset_0_2px_0_0_rgba(232,138,94,0.3)] mt-auto">
+        <div class="text-[#E88A5E] font-bold font-h2-pixel text-2xl mb-4 md:mb-0">
+            PixelClassroom
+        </div>
+        <div class="flex gap-6 font-space-grotesk text-xs uppercase tracking-widest text-[#FAF4ED] dark:text-stone-300">
+            <a class="text-stone-400 hover:text-[#FAF4ED] transition-colors hover:text-[#F4C78C]" href="#">Privacy</a>
+            <a class="text-stone-400 hover:text-[#FAF4ED] transition-colors hover:text-[#F4C78C]" href="#">Terms</a>
+            <a class="text-stone-400 hover:text-[#FAF4ED] transition-colors hover:text-[#F4C78C]" href="#">Support</a>
+            <a class="text-stone-400 hover:text-[#FAF4ED] transition-colors hover:text-[#F4C78C]" href="#">Changelog</a>
+        </div>
+        <div class="text-stone-400 font-space-grotesk text-xs mt-4 md:mt-0">
+            © 2024 Pixel Classroom. Hand-crafted with pixels.
+        </div>
+    </footer>
+</body>
+
+</html>

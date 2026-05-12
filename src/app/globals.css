@@ -1,7 +1,5 @@
 @import 'tailwindcss';
 
-
-
 :root {
   --cream: #FFF8E7;
   --lavender: #E6E6FA;
@@ -25,40 +23,36 @@ body {
   overflow-x: hidden;
 }
 
-/* Pixel Border */
 .pixel-border {
   border: 3px solid var(--charcoal);
-  box-shadow: 
+  box-shadow:
     4px 4px 0 var(--charcoal),
-    -1px -1px 0 rgba(0,0,0,0.1) inset;
+    -1px -1px 0 rgba(0, 0, 0, 0.1) inset;
 }
 
-/* Pixel Shadow */
 .pixel-shadow {
-  box-shadow: 
+  box-shadow:
     6px 6px 0 var(--charcoal),
-    12px 12px 0 rgba(0,0,0,0.1);
+    12px 12px 0 rgba(0, 0, 0, 0.1);
 }
 
-/* Pixel Hover Effect */
 .pixel-hover {
   transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
 
 .pixel-hover:hover {
   transform: translate(-3px, -3px);
-  box-shadow: 
+  box-shadow:
     9px 9px 0 var(--charcoal),
-    15px 15px 0 rgba(0,0,0,0.1);
+    15px 15px 0 rgba(0, 0, 0, 0.1);
 }
 
 .pixel-hover:active {
   transform: translate(2px, 2px);
-  box-shadow: 
+  box-shadow:
     2px 2px 0 var(--charcoal);
 }
 
-/* Scanline Effect (Optional - for extra retro feel) */
 .scanlines::before {
   content: '';
   position: absolute;
@@ -66,18 +60,15 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: repeating-linear-gradient(
-    0deg,
-    transparent,
-    transparent 2px,
-    rgba(0, 0, 0, 0.03) 2px,
-    rgba(0, 0, 0, 0.03) 4px
-  );
+  background: repeating-linear-gradient(0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.03) 2px,
+      rgba(0, 0, 0, 0.03) 4px);
   pointer-events: none;
   z-index: 100;
 }
 
-/* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 12px;
 }
@@ -94,4 +85,11 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--sky);
+}
+
+textarea.pixel-border:focus {
+  border-color: var(--mint);
+  box-shadow:
+    4px 4px 0 var(--mint),
+    -1px -1px 0 rgba(0, 0, 0, 0.1) inset;
 }
